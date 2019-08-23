@@ -31,6 +31,7 @@ Things you may want to cover:
 |name|integer|null: false|
 
 # Association
+- has_many :groups_users
 - has_many :groups, through: :groups_users
 - has_meny :messages
 
@@ -42,6 +43,7 @@ Things you may want to cover:
 |group_name|integer|null: false|
 
 ## Association
+- has_many :groups_users
 - has_many :users, through: :groups_users
 - belongs_to :messages
 
@@ -60,9 +62,9 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|message_id|integer|null: false, foreign_key: true|
-|body|integer
-|image|string
+|id|integer|null: false|
+|body|integer|
+|image|string|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 
