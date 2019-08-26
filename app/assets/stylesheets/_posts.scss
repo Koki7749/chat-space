@@ -4,6 +4,7 @@
   line-height: 30px;
   color: white;
   text-align: center;
+  // position: fixed;
 }
 .chat-side{
   width: 300px;
@@ -21,7 +22,7 @@
   .side-group{
   padding-top: 100px;
   background-color: #2f3e51;
-  height: 600px;
+  height: calc(100vh - 130px);
   padding: 0 20px;
 
   .group-title{
@@ -41,34 +42,89 @@
 
 .chat-main {
   width: calc(100vw - 300px);
+  height:100vh;
   float: left;
   display:flex;
   flex-flow: column;
+  position: relative;
    .chat-title{
    background-color: white;
    height: 100px;
    border-bottom: black;
    border-bottom: #eeeeee;
    .title-name{
-    font-size: 20px;
-    color: #333333;
-    padding: 35px 0 15px 40px;
+   font-size: 20px;
+   color: #333333;
+   padding: 35px 0 15px 40px;
   }
    .user-name{
-    color: black;
-    font-size: 12px;
-    padding: 0 0 0 40px;
+   color: black;
+   font-size: 12px;
+   padding: 0 0 0 40px;
+  }
+   .exit-bottun{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border: solid 1px #38aef0;
+    color:#38aef0;
+    position: absolute;
+    right: 40px;
+    top:28px;
   }
   }
 
    .chat-home{
    overflow: scroll;
    background-color: #fafafa;
-   min-height: 500px;
+   padding:0 0 100px 0;
+   height: calc(100% - 220px);
+   .chat-member{
+   font-size: 16px;
+   color:#434A54;
+   padding: 46px 0 10px 40px;
+   font-weight: bold;
+   display: inline-block;
   }
-   .chat-search{
-   background-color: yellow;
-   height: 100px;
+   .chat-time{
+    font-size: 12px;
+    color:#999999;
+    margin-left:10px;
+    display: inline-block;
+   }
+   .chat-comment{
+   font-size: 16px;
+   color:#434A54;
+   padding: 0 0 0 40px;
+  }
   }
 
+  .message-form{
+   background-color:#ddd;
+   height: 90px;
+   display: flex;
+   flex-flow: order;
+  .aaa{
+    height: 50px;
+    margin: 20px 0 20px 40px;
+    padding: 30px 40px 0 10px;
+    width: calc(100% - 100px);
+    color: #434a54;
+    border-style: none;
+  }
+  .bbb{
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+  }
+  .ccc{
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    margin-left: 15px;
+    background-color: #38aef0;
+    color: white;
+    cursor: pointer;
+  }
+ }
 }
