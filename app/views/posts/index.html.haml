@@ -3,6 +3,9 @@
 .chat-side
   .side-header
     Koki
+    %i.fa.fa-edit
+    %span<>
+    %i.fa.fa-cog
   .side-group
     .group-title
       ii
@@ -16,6 +19,8 @@
       ii
     .user-name
       Member : Koki
+    .edit-bottun
+      Edit
   .chat-home
     .chat-member
       Koki
@@ -24,15 +29,47 @@
     .chat-comment
       こんにちは
 
-  .chat-search
+    .chat-member
+      Koki
+    .chat-time
+      2019/08/23(Fri) 11:45:16
+    .chat-comment
+      こんにちは
 
+    .chat-member
+      Koki
+    .chat-time
+      2019/08/23(Fri) 11:45:16
+    .chat-comment
+      こんにちは
 
+    .chat-member
+      Koki
+    .chat-time
+      2019/08/23(Fri) 11:45:16
+    .chat-comment
+      こんにちは
 
-  -# =link_to "https://www.facebook.com/", class: "contents__btn" do
-  -#   Facebook
-  -# =link_to "https://twitter.com/", class: "contents__btn" do
-  -#   Twitter
-  -# =link_to "https://www.instagram.com/", class: "contents__btn" do
-  -#   Instagram
-    -# =link_to "https://www.facebook.com/", class: "contents__btn" do
-    -# = fa_icon 'fas fa-edit'
+    .chat-member
+      Koki
+    .chat-time
+      2019/08/23(Fri) 11:45:16
+    .chat-comment
+      こんにちは
+
+    .chat-member
+      Koki
+    .chat-time
+      2019/08/23(Fri) 11:45:16
+    .chat-comment
+      こんにちは
+
+  .chat-seach
+    = form_for @body do |f|
+      = f.text_area :body, placeholder: "type a message", class: "write-message"
+      %label.label
+        = f.label :image, class: "imagea" do
+          %i.fa.fa-image
+          = f.file_field :image, class: "select-image"
+      = f.submit "send", class: "send-bottun"
+

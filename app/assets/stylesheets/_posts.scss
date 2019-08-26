@@ -11,6 +11,10 @@
   color: white;
   float: left;
 
+  .fa.fa-edit{
+  padding:0 0 10px 185px;
+  }
+
   .side-header{
   height: 100px;
   background-color: #253141;
@@ -62,7 +66,7 @@
    font-size: 12px;
    padding: 0 0 0 40px;
   }
-   .exit-bottun{
+   .edit-bottun{
     height: 40px;
     line-height: 40px;
     padding: 0 20px;
@@ -91,33 +95,42 @@
     color:#999999;
     margin-left:10px;
     display: inline-block;
-   }
-   .chat-comment{
-   font-size: 16px;
-   color:#434A54;
-   padding: 0 0 0 40px;
+  }
+  .chat-comment{
+  font-size: 16px;
+  color:#434A54;
+  padding: 0 0 0 40px;
   }
   }
 
-  .message-form{
-   background-color:#ddd;
-   height: 90px;
-   display: flex;
-   flex-flow: order;
-  .aaa{
+  .chat-seach{
+  background-color:gray;
+  height: 90px;
+  width: 100%;
+  position: relative;
+
+}
+    .write-message{
     height: 50px;
     margin: 20px 0 20px 40px;
-    padding: 30px 40px 0 10px;
-    width: calc(100% - 100px);
+    padding: 15px 40px 0 10px;
+    width: calc(100% - 165px);
     color: #434a54;
     border-style: none;
   }
-  .bbb{
-    height: 50px;
-    width: 100px;
+  .imagea{
+    border-style: none;
+    font-size: 1.3rem;
     cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    right: 150px;
+    }  
+
+  .select-image{
+    display: none;
   }
-  .ccc{
+  .send-bottun{
     width: 100px;
     height: 50px;
     padding: 0 30px;
@@ -125,6 +138,7 @@
     background-color: #38aef0;
     color: white;
     cursor: pointer;
+    position: absolute;
+    bottom: 20px;
   }
- }
 }
