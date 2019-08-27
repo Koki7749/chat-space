@@ -11,8 +11,13 @@
   color: white;
   float: left;
 
-  .fa.fa-edit{
-  padding:0 0 10px 185px;
+  .edit{
+  padding:0 0 10px 170px;
+  color:white;
+  text-decoration:none;
+  }
+  .cog{
+    color:white;
   }
 
   .side-header{
@@ -31,13 +36,11 @@
 
   .group-title{
   font-size: 15px;
-  font-weight: bold;
   color: #FFFFFF;
   padding: 20px 0 5px 0;
   }
   .group-comment{
     font-size: 11px;
-    font-weight: bold;
     color: #FFFFFF;
     padding: 0 0 40px 0;
     }  
@@ -62,7 +65,7 @@
    padding: 35px 0 15px 40px;
   }
    .user-name{
-   color: black;
+   color: #999999;
    font-size: 12px;
    padding: 0 0 0 40px;
   }
@@ -97,14 +100,14 @@
     display: inline-block;
   }
   .chat-comment{
-  font-size: 16px;
+  font-size: 14px;
   color:#434A54;
   padding: 0 0 0 40px;
   }
   }
 
-  .chat-seach{
-  background-color:gray;
+  .chat-search{
+  background-color:#ddd;
   height: 90px;
   width: 100%;
   position: relative;

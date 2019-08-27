@@ -3,15 +3,15 @@
 .chat-side
   .side-header
     Koki
-    %i.fa.fa-edit
+    =link_to "", class: "edit" do
+      = fa_icon 'edit'
     %span<>
-    %i.fa.fa-cog
+      =link_to "", class: "cog" do
+        = fa_icon 'cog'
+
+
   .side-group
-    .group-title
-      ii
-    .group-comment
-      画像が投稿されています
-  
+    = render partial: "group"
 
 .chat-main
   .chat-title
@@ -22,49 +22,9 @@
     .edit-bottun
       Edit
   .chat-home
-    .chat-member
-      Koki
-    .chat-time
-      2019/08/23(Fri) 11:45:16
-    .chat-comment
-      こんにちは
+    = render partial: "chat_home"
 
-    .chat-member
-      Koki
-    .chat-time
-      2019/08/23(Fri) 11:45:16
-    .chat-comment
-      こんにちは
-
-    .chat-member
-      Koki
-    .chat-time
-      2019/08/23(Fri) 11:45:16
-    .chat-comment
-      こんにちは
-
-    .chat-member
-      Koki
-    .chat-time
-      2019/08/23(Fri) 11:45:16
-    .chat-comment
-      こんにちは
-
-    .chat-member
-      Koki
-    .chat-time
-      2019/08/23(Fri) 11:45:16
-    .chat-comment
-      こんにちは
-
-    .chat-member
-      Koki
-    .chat-time
-      2019/08/23(Fri) 11:45:16
-    .chat-comment
-      こんにちは
-
-  .chat-seach
+  .chat-search
     = form_for @body do |f|
       = f.text_area :body, placeholder: "type a message", class: "write-message"
       %label.label
