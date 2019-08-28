@@ -9,7 +9,7 @@
 
 .group
   - current_user.groups.each do |group|
-    = link_to '#' do
+    = link_to group_posts_path(group) do
       .group-title
         = group.name
       .group-comment
