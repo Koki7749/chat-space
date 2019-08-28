@@ -1,14 +1,10 @@
-.header
-  グループを作成しました
 .chat-side
   .side-header
-    Koki
-    =link_to "", class: "edit" do
-      = fa_icon 'edit'
-    %span<>
-      =link_to "", class: "cog" do
-        = fa_icon 'cog'
-
+    = current_user.name
+    =link_to new_group_path do
+      = fa_icon 'edit', class: "edit"
+    = link_to edit_user_path(current_user) do
+      = fa_icon 'cog', class: 'icon'
 
   .side-group
     = render partial: "group"
@@ -18,9 +14,11 @@
     .title-name
       ii
     .user-name
-      Member : Koki
+      Member : 
+      = link_to current_user.name
     .edit-bottun
       Edit
+
   .chat-home
     = render partial: "chat_home"
 

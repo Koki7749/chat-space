@@ -1,17 +1,10 @@
-.header{
-  background-color: #38AEF0;
-  height: 30px;
-  line-height: 30px;
-  color: white;
-  text-align: center;
-}
 .chat-side{
   width: 300px;
   color: white;
   float: left;
 
   .edit{
-  padding:0 0 10px 170px;
+  padding:0 0 10px 180px;
   color:white;
   text-decoration:none;
   }
@@ -37,12 +30,14 @@
   font-size: 15px;
   color: #FFFFFF;
   padding: 20px 0 5px 0;
+  text-decoration: none;
   }
   .group-comment{
     font-size: 11px;
     color: #FFFFFF;
     padding: 0 0 40px 0;
-    }  
+    text-decoration: none;
+  }  
   }
 }
 
@@ -53,22 +48,23 @@
   display:flex;
   flex-flow: column;
   position: relative;
-   .chat-title{
-   background-color: white;
-   height: 100px;
-   border-bottom: black;
-   border-bottom: #eeeeee;
-   .title-name{
-   font-size: 20px;
-   color: #333333;
-   padding: 35px 0 15px 40px;
+  .chat-title{
+  background-color: white;
+  height: 100px;
+  border-bottom: black;
+  border-bottom: #eeeeee;
+  .title-name{
+  font-size: 20px;
+  color: #333333;
+  padding: 35px 0 15px 40px;
   }
-   .user-name{
-   color: #999999;
-   font-size: 12px;
-   padding: 0 0 0 40px;
+  .user-name{
+  color: #999999;
+  font-size: 12px;
+  padding: 0 0 0 40px;
+  text-decoration: none;
   }
-   .edit-bottun{
+  .edit-bottun{
     height: 40px;
     line-height: 40px;
     padding: 0 20px;
@@ -80,19 +76,19 @@
   }
   }
 
-   .chat-home{
-   overflow: scroll;
-   background-color: #fafafa;
-   padding:0 0 100px 0;
-   height: calc(100% - 220px);
-   .chat-member{
-   font-size: 16px;
-   color:#434A54;
-   padding: 46px 0 10px 40px;
-   font-weight: bold;
-   display: inline-block;
+  .chat-home{
+  overflow: scroll;
+  background-color: #fafafa;
+  padding:0 0 100px 0;
+  height: calc(100% - 220px);
+  .chat-member{
+  font-size: 16px;
+  color:#434A54;
+  padding: 46px 0 10px 40px;
+  font-weight: bold;
+  display: inline-block;
   }
-   .chat-time{
+  .chat-time{
     font-size: 12px;
     color:#999999;
     margin-left:10px;
@@ -111,7 +107,6 @@
   width: 100%;
   position: relative;
 
-}
     .write-message{
     height: 50px;
     margin: 20px 0 20px 40px;
@@ -143,4 +138,5 @@
     position: absolute;
     bottom: 20px;
   }
+}
 }
