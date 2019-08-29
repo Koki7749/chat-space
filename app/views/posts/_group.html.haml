@@ -1,12 +1,3 @@
--# .group-title
--#   @group.name
--# .group-comment
--#   画像が投稿されています
--# .group-title
--#   ねこ
--# .group-comment
--#   画像が投稿されています
-
 .group
   - current_user.groups.each do |group|
     = link_to group_posts_path(group) do
