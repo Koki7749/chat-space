@@ -3,7 +3,7 @@
 .chat-time
   = post.created_at.strftime("%Y/%m/%d %H:%M")
 .chat-comment
-  - if post.content.present?
+  - if post.body.present?
     %p.lower-post__body
       = post.body
   = image_tag post.image.url, class: 'lower-message__image' if post.image.present?

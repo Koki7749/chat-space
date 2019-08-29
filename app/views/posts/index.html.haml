@@ -12,7 +12,7 @@
 .chat-main
   .chat-title
     .title-name
-      ii
+      =@group.name
     .user-name
       Member : 
       = link_to current_user.name
@@ -20,7 +20,8 @@
       Edit
 
   .chat-home
-    = render partial: "chat_home"
+    -@posts.each do |post|
+      = render partial: "chat_home", locals: {post: post}
 
   .chat-search
     = form_for [@group, @post] do |f|
@@ -30,4 +31,3 @@
           %i.fa.fa-image
           = f.file_field :image, class: "select-image"
       = f.submit "send", class: "send-bottun"
-
