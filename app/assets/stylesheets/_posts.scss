@@ -23,8 +23,9 @@
   .side-group{
   padding-top: 100px;
   background-color: #2f3e51;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 100px);
   padding: 0 20px;
+  overflow: scroll;
 
   .group-title{
   font-size: 15px;
@@ -32,6 +33,7 @@
   padding: 20px 0 5px 0;
   text-decoration: none;
   }
+
   .group-comment{
     font-size: 11px;
     color: #FFFFFF;
@@ -80,7 +82,7 @@
   overflow: scroll;
   background-color: #fafafa;
   padding:0 0 100px 0;
-  height: calc(100% - 220px);
+  height: calc(100% - 190px);
   .chat-member{
   font-size: 16px;
   color:#434A54;
