@@ -17,7 +17,7 @@ RSpec.describe Post, type: :model do
     end
 
     context 'can not save' do
-      it 'is invalid without body and image' do
+      it 'is invalid without content and image' do
         post = build(:post, body: nil, image: nil)
         post.valid?
         expect(post.errors[:body]).to include('を入力してください')
