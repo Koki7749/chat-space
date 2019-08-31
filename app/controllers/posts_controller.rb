@@ -15,6 +15,10 @@ class PostsController < ApplicationController
       flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
+    respond_to do |format|
+      format.html { redirect_to tweet_path(params[:tweet_id])  }
+      format.json
+    end
   end
 
   private
