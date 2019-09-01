@@ -4,20 +4,21 @@ $(document).on('turbolinks:load', function(){
     var image = post.image? post.image : ""
 
     var html = `<div class="chat">
-                <div class="chat-member">
-                ${post.user_name}
-                </div>
-                <div class="chat-time">
-                ${post.created_at}
-                </div>
-                <div class="chat-comment">
-                <p class="lower-post__body">
-                ${post.body}
-                </p>
-                <div>
-                <img class="lower-message__image"
-                src=${image}>
-                </div>
+                  <div class="chat-member">
+                    ${post.user_name}
+                  </div>
+                  <div class="chat-time">
+                    ${post.created_at}
+                  </div>
+                  <div class="chat-comment">
+                  <p class="lower-post__body">
+                    ${post.body}
+                  </p>
+                  </div>
+                  <div>
+                  <img class="lower-message__image"
+                    src=${image}>
+                  </div>
                 </div>`
     return html;
   }
@@ -40,7 +41,7 @@ $(document).on('turbolinks:load', function(){
       // if(message==nul){alert('メッセージを入力してください')};
       var html = buildHTML(data);
       $('.chat-home').append(html)
-      $('#post_body').val('')
+      $('#post_body').reset();
       $('.chat-home').animate({ scrollTop: $('.chat-home')[0].scrollHeight});
     })
     .fail(function(){
