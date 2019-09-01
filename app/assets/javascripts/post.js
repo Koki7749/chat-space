@@ -2,7 +2,6 @@ $(document).on('turbolinks:load', function(){
   function buildHTML(post){
 
     var image = post.image? post.image : ""
-
     var html = `<div class="chat">
                   <div class="chat-member">
                     ${post.user_name}
@@ -41,7 +40,7 @@ $(document).on('turbolinks:load', function(){
       // if(message==nul){alert('メッセージを入力してください')};
       var html = buildHTML(data);
       $('.chat-home').append(html)
-      $('#post_body').reset();
+      $("form")[0].reset();
       $('.chat-home').animate({ scrollTop: $('.chat-home')[0].scrollHeight});
     })
     .fail(function(){
