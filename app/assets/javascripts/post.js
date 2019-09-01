@@ -1,8 +1,11 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   function buildHTML(post){
+
+    var image = post.image? post.image : ""
+
     var html = `<div class="chat">
                 <div class="chat-member">
-                ${post.user.name}
+                ${post.user_name}
                 </div>
                 <div class="chat-time">
                 ${post.created_at}
@@ -11,6 +14,9 @@ $(function(){
                 <p class="lower-post__body">
                 ${post.body}
                 </p>
+                <div>
+                <img class="lower-message__image"
+                src=${image}>
                 </div>
                 </div>`
     return html;
@@ -20,6 +26,7 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
+  
     $.ajax({
       url: url,
       type: "POST",
@@ -30,17 +37,18 @@ $(function(){
     })
   
     .done(function(data){
-      console.log(data)
+      // if(message==nul){alert('メッセージを入力してください')};
       var html = buildHTML(data);
       $('.chat-home').append(html)
-      $('.new_post').val('')
+      $('#post_body').val('')
+      $('.chat-home').animate({ scrollTop: $('.chat-home')[0].scrollHeight});
     })
     .fail(function(){
       alert('error');
     })
 
     .always(() => {
-      $(".form__submit").removeAttr("disabled");
-      })
+      $(".send-bottun").removeAttr("disabled");
+    })
   })
 })
