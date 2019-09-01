@@ -1,9 +1,10 @@
-.chat-member
-  = post.user.name
-.chat-time
-  = post.created_at.strftime("%Y/%m/%d %H:%M")
-.chat-comment
-  - if post.body.present?
-    %p.lower-post__body
-      = post.body
-  = image_tag post.image.url, class: 'lower-message__image' if post.image.present?
+.chat
+  .chat-member
+    = post.user.name
+  .chat-time
+    = post.created_at.strftime("%Y/%m/%d %H:%M")
+  .chat-comment
+    - if post.body.present?
+      %p.lower-post__body
+        = post.body
+    = image_tag post.image, class: 'lower-message__image' if post.image.present?
