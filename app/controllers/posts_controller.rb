@@ -9,16 +9,16 @@ class PostsController < ApplicationController
   def create
     @post = @group.posts.new(post_params)
     if @post.save
-      redirect_to group_posts_path(@group), notice: 'メッセージが送信されました'
+      redirect_to group_posts_path(@group), notice: 'メッセージが送信されました'  and return
     else
       @posts = @group.posts.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
-    # respond_to do |format|
-    #   format.html { redirect_to post_path(params[:post_id])  }
-    #   format.json
-    # end  
+    respond_to do |format|
+      format.html { redirect_to group_posts_path(@group) }
+      format.json
+    end  
   end
 
 # respond toの位置、tweet_pathをpost_pathに修正
