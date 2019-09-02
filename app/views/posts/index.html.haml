@@ -17,7 +17,8 @@
       Member : 
       = link_to current_user.name
     .edit-bottun
-      Edit
+      = link_to edit_group_path(@group.id) do
+        Edit
 
   .chat-home
     -@posts.each do |post|
