@@ -4,10 +4,11 @@ $(function() {
 
     $.ajax({
       type: 'GET',
-      url: '/groups/[:id]/edit',
+      url: '/users',
       data: { keyword: input },
       dataType: 'json'
     })
+    console.log(this)
 
   });
 });
