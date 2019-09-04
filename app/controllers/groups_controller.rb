@@ -19,11 +19,9 @@ before_action :set_group, only:[:edit, :update]
   end
 
   def edit
-    # @group = Group.find(params[:id])
   end
 
   def update
-    @group = Group.find(params[:id])
     if @group.update(group_params)
       redirect_to group_posts_path(@group), notice: 'グループを編集しました'
     else
@@ -33,8 +31,9 @@ before_action :set_group, only:[:edit, :update]
 
   private
   def group_params
-    params.require(:group).permit(:name, { :user_ids => []})
-    # params.require(:group).permit(:name,:user_id)
+    params.require(:group).permit(:name, { user_ids: []})
+    # params.require(:user).permit(:name).merge(user_id: [current_user.id])
+    # params.require(:group).permit(:name).merge(user_id: params[:name])
   end
 
   def set_group

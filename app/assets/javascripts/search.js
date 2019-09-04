@@ -1,7 +1,6 @@
 $(document).on('turbolinks:load', function(){
 
   var search_list = $("#user-search-result");
-  // var member_list = $("#member-append");
 
   function appendUser(user){
     var html=`
