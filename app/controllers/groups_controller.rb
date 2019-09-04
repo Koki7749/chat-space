@@ -10,7 +10,6 @@ before_action :set_group, only:[:edit, :update]
   end
 
   def create
-    # binding.pry
     @group = Group.new(group_params)
     if @group.save
       redirect_to root_path, notice: 'グループを作成しました'
@@ -26,7 +25,6 @@ before_action :set_group, only:[:edit, :update]
   def update
     @group = Group.find(params[:id])
     if @group.update(group_params)
-      binding.pry
       redirect_to group_posts_path(@group), notice: 'グループを編集しました'
     else
       render :edit
@@ -35,9 +33,8 @@ before_action :set_group, only:[:edit, :update]
 
   private
   def group_params
-    # params.require(:group).permit(:name, { :user_ids => [] })
-    params.require(:group).permit(:name,:user_id)
-
+    params.require(:group).permit(:name, { :user_ids => []})
+    # params.require(:group).permit(:name,:user_id)
   end
 
   def set_group

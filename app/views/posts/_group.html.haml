@@ -1,7 +1,8 @@
 .side-group
   - current_user.groups.each do |group|
     = link_to group_posts_path(group) do
-      .group-title
-        = group.name
-      .group-comment
-        = group.show_last_post
+      .group
+        .group-title
+          = group.name
+        .group-comment
+          = group.show_last_post

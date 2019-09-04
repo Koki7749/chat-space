@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def index
     @post = Post.new
     @posts = @group.posts.includes(:user)
+    # @group = @group.find(:id)
   end
 
   def create

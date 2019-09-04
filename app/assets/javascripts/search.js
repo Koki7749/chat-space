@@ -50,11 +50,10 @@ $(document).on('turbolinks:load', function(){
 });
 
 $(document).on('turbolinks:load', function(){
-var search_list = $(".chat-group-user");
+var search_list = $("#myid-Hello-World");
 
 function appendMember(user_id, user_name){
   var html=`
-            <div class='chat-group-user'>
             <div class='chat-group-user clearfix js-chat-member' id='${user_id}'>
             <input name='group[user_ids][]' type='hidden' value='${user_id}'>
             <p class='chat-group-user__name'>${user_name}</p>
