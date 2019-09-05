@@ -37,7 +37,6 @@ $(document).on('turbolinks:load', function(){
     })
   
     .done(function(data){
-      // if(message==nul){alert('メッセージを入力してください')};
       var html = buildHTML(data);
       $('.chat-home').append(html)
       $("form")[0].reset();
