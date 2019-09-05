@@ -32,8 +32,6 @@ before_action :set_group, only:[:edit, :update]
   private
   def group_params
     params.require(:group).permit(:name, { user_ids: []})
-    # params.require(:user).permit(:name).merge(user_id: [current_user.id])
-    # params.require(:group).permit(:name).merge(user_id: params[:name])
   end
 
   def set_group
