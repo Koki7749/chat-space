@@ -55,7 +55,6 @@ $(function() {
     var reloadPosts = function() {
       //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
       last_post_id = $(".chat-home .chat_message:last-child").data("id");
-      console.log(last_post_id);
 
       $.ajax({
         //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
@@ -67,8 +66,6 @@ $(function() {
         data: {id: last_post_id}
       })
       .done(function(posts) {
-        // console.log(posts);
-        //console.log("test")
         //追加するHTMLの入れ物を作る
         var insertHTML = '';
         //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
@@ -79,7 +76,7 @@ $(function() {
         });
       })  
       .fail(function() {
-        // alert('自動更新に失敗しました');
+        alert('自動更新に失敗しました');
     });
   };
   setInterval(reloadPosts, 5000);
