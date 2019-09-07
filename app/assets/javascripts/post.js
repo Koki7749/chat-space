@@ -53,6 +53,7 @@ $(document).on('turbolinks:load', function(){
 $(function() {
 
     var reloadPosts = function() {
+      if (window.location.href.match(/\/groups\/\d+\/posts/)){
       //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
       last_post_id = $(".chat-home .chat_message:last-child").data("id");
 
@@ -79,6 +80,7 @@ $(function() {
         alert('自動更新に失敗しました');
     });
   };
-  setInterval(reloadPosts, 5000);
+  }
+  setInterval(reloadPosts, 15000);
   });
 })
