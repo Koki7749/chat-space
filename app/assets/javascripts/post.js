@@ -81,6 +81,6 @@ $(function() {
     });
   };
   }
-  setInterval(reloadPosts, 15000);
+  setInterval(reloadPosts, 5000);
   });
 })
