@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
 
   var search_list = $("#user-search-result");
 
@@ -48,7 +48,7 @@ $(function(){
   });
 });
 
-$(function(){
+$(document).on('turbolinks:load', function(){
 var search_list = $("#myid-Hello-World");
 
 function appendMember(user_id, user_name){
@@ -70,7 +70,7 @@ function appendMember(user_id, user_name){
     })
 });
 
-$(function(){
+$(document).on('turbolinks:load', function(){
   $(document).on("click", ".user-search-remove " ,function(e){
     e.preventDefault();
     $(this).parent().remove();
