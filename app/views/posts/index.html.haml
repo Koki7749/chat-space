@@ -27,7 +27,7 @@
 
   .chat-search
     = form_for [@group, @post] do |f|
-      = f.text_area :body, placeholder: "type a message", class: "write-message"
+      = f.text_field :body, placeholder: "type a message", class: "write-message"
       %label.label
         = f.label :image, class: "imagea" do
           %i.fa.fa-image

@@ -117,10 +117,11 @@
     .write-message{
     height: 50px;
     margin: 20px 0 20px 40px;
-    padding: 15px 40px 0 10px;
+    padding: 0 40px 0 10px;
     width: calc(100% - 165px);
     color: #434a54;
     border-style: none;
+    resize: none;
   }
   .imagea{
     border-style: none;
